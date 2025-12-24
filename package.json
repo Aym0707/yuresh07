@@ -1,0 +1,41 @@
+{
+  "name": "aym-shop",
+  "version": "2.0.0",
+  "description": "فروشگاه آنلاین AYM - کیفیت و اعتماد در هر خرید",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel start",
+    "build": "echo 'No build required for static site'",
+    "deploy": "vercel --prod",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "ecommerce",
+    "shop",
+    "afghanistan",
+    "persian",
+    "dari",
+    "online-store"
+  ],
+  "author": "فروشگاه AYM",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.0"
+  },
+  "devDependencies": {
+    "vercel": "^35.0.0"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aym0101/web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aym0101/web/issues"
+  },
+  "homepage": "https://yuresh07.vercel.app"
+}

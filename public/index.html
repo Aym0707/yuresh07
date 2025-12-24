@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین AYM - کیفیت و اعتماد در هر خرید</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="فروشگاه آنلاین AYM - کیفیت و اعتماد در هر خرید. ارسال رایگان به سراسر افغانستان. محصولات متنوع با بهترین قیمت">
+    <meta name="keywords" content="فروشگاه آنلاین, AYM, خرید افغانستان, ارسال رایگان, محصولات متنوع">
+    <meta name="author" content="فروشگاه AYM">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="فروشگاه آنلاین AYM">
+    <meta property="og:description" content="کیفیت و اعتماد در هر خرید - ارسال رایگان به سراسر افغانستان">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yuresh07.vercel.app">
+    <meta property="og:image" content="https://yuresh07.vercel.app/images/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="فروشگاه آنلاین AYM">
+    <meta name="twitter:description" content="کیفیت و اعتماد در هر خرید">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.png" type="image/jpeg">
+    
+    <!-- Font Awesome (Deferred Loading) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- CSS -->
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "OnlineStore",
+        "name": "فروشگاه آنلاین AYM",
+        "description": "کیفیت و اعتماد در هر خرید - ارسال رایگان به سراسر افغانستان",
+        "url": "https://yuresh07.vercel.app",
+        "logo": "https://yuresh07.vercel.app/images/logo.jpg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+93789281770",
+            "contactType": "Customer Service",
+            "areaServed": "AF",
+            "availableLanguage": ["Persian", "Dari"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AF",
+            "addressLocality": "Kabul",
+            "streetAddress": "لیسه مریم، مقابل مرکز تجارتی طلا، مارکیت تجارتی جام جم منزل سوم"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner"></i>
+        </div>
+        <h3>در حال بارگیری محصولات...</h3>
+        <p>لطفاً چند لحظه صبر کنید</p>
+        <div id="loadingError" class="loading-error" style="display: none;">
+            <h4><i class="fas fa-exclamation-triangle"></i> خطا در بارگیری محصولات</h4>
+            <p>نمی‌توانیم محصولات را از سرور بارگیری کنیم. لطفاً:</p>
+            <p>۱. اتصال اینترنت خود را بررسی کنید</p>
+            <p>۲. صفحه را رفرش (F5) کنید</p>
+            <p>۳. اگر مشکل ادامه دارد، با پشتیبانی تماس بگیرید: ۰۷۸۹۲۸۱۷۷۰</p>
+            <button id="retryLoadingBtn" class="btn btn-primary" style="margin-top: 10px;">
+                <i class="fas fa-redo"></i> تلاش مجدد
+            </button>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <!-- Header Background with Fallback -->
+        <div class="header-bg-fallback">
+            <!-- Fallback for header image -->
+            <div style="display: none;"></div>
+        </div>
+        
+        <div class="header-content">
+            <!-- Navigation Menu -->
+            <div class="nav-menu">
+                <a class="nav-link" id="aboutLink" role="button">
+                    <i class="fas fa-info-circle"></i> درباره ما
+                </a>
+                <a class="nav-link" id="contactLink" role="button">
+                    <i class="fas fa-phone-alt"></i> تماس با ما
+                </a>
+                <a class="nav-link" id="guideLink" role="button">
+                    <i class="fas fa-shopping-bag"></i> راهنمای خرید
+                </a>
+            </div>
+            
+            <div class="header-top">
+                <div class="logo-container">
+                    <div>
+                        <div class="shop-title">فروشگاه آنلاین AYM</div>
+                        <div class="shop-subtitle">کیفیت و اعتماد در هر خرید</div>
+                    </div>
+                    <!-- Logo with fallback -->
+                    <div class="logo-fallback" id="logoFallback" style="display: none;">🛍️</div>
+                    <img src="/images/logo.jpg" 
+                         alt="فروشگاه آنلاین AYM - کیفیت و اعتماد در هر خرید" 
+                         class="logo" 
+                         id="logoImage"
+                         width="65" 
+                         height="65"
+                         loading="lazy"
+                         onerror="document.getElementById('logoFallback').style.display='flex'; this.style.display='none';">
+                </div>
+                <div class="header-actions">
+                    <div class="social-links">
+                        <a href="https://wa.me/93789281770" target="_blank" class="social-link whatsapp" aria-label="واتساپ">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/tebgiahee" target="_blank" class="social-link facebook" aria-label="فیسبوک">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/herbal_skincare7/" target="_blank" class="social-link instagram" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div id="cartIcon" class="cart-icon-container">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-text">سبد خرید</span>
+                        <span id="cartCount" class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Free Shipping Banner -->
+            <div class="shipping-banner">
+                <i class="fas fa-truck"></i>
+                <span>ارسال رایگان به سراسر افغانستان</span>
+            </div>
+
+            <div class="beta-match">
+                <i class="fas fa-flask"></i>
+                نسخه آزمایشی
+            </div>
+            
+            <!-- Hero Content in Header -->
+            <div class="header-hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">به فروشگاه آنلاین AYM خوش آمدید</h1>
+                    <p class="hero-subtitle">کیفیت و اعتماد را با ما تجربه کنید. گستره‌ای از محصولات متنوع با بهترین قیمت‌ها و ارسال سریع</p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <span class="feature-text">ارسال رایگان</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span class="feature-text">تضمین کیفیت</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <span class="feature-text">پشتیبانی 24/7</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <span class="feature-text">بهترین قیمت</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-bottom">
+                <div class="tabs">
+                    <button class="tab active" data-tab="products">
+                        <i class="fas fa-box"></i> محصولات
+                    </button>
+                    <button class="tab" data-tab="cart">
+                        <i class="fas fa-shopping-cart"></i> سبد خرید
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="container" id="mainContainer" style="display: none;">
+        <div id="productsTab" class="tab-content active">
+            <div class="controls-section">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-box" placeholder="جستجو با کود محصول، نام یا توضیحات..." aria-label="جستجوی محصولات">
+                    <button id="searchBtn" class="btn btn-primary">
+                        <i class="fas fa-search"></i> جستجو
+                    </button>
+                    <button id="clearSearchBtn" class="btn btn-warning">
+                        <i class="fas fa-times"></i> پاک کردن
+                    </button>
+                </div>
+                
+                <div class="filter-section">
+                    <h3><i class="fas fa-filter"></i> فیلتر بر اساس دسته‌بندی</h3>
+                    <div class="category-dropdown">
+                        <button class="dropdown-toggle">
+                            <span id="selectedCategory">همه دسته‌بندی‌ها</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="categoryDropdown" class="dropdown-menu">
+                            <!-- Categories will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="productCount" class="product-count">در حال بارگیری محصولات...</div>
+            
+            <div id="productsContainer" class="products-grid">
+                <!-- محصولات اینجا نمایش داده می‌شوند -->
+            </div>
+            
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div style="font-size: 4rem; margin-bottom: 20px; color: #e0e0e0;">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h3>محصولی یافت نشد</h3>
+                <p>برای مشاهده محصولات، لطفاً با مدیریت فروشگاه تماس بگیرید: ۰۷۸۹۲۸۱۷۷۰</p>
+                <button id="refreshProductsBtn" class="btn btn-primary" style="margin-top: 15px;">
+                    <i class="fas fa-redo"></i> بارگیری مجدد محصولات
+                </button>
+            </div>
+            
+            <div id="pagination" class="pagination" style="display: none;">
+                <button id="prevPageBtn" class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-right"></i> قبلی
+                </button>
+                <span id="pageInfo" class="page-info">صفحه 1 از 1</span>
+                <button id="nextPageBtn" class="pagination-btn" disabled>
+                    بعدی <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="cartTab" class="tab-content">
+            <div id="cartContainer" class="cart-items">
+                <!-- آیتم‌های سبد خرید اینجا نمایش داده می‌شوند -->
+            </div>
+            
+            <div id="emptyCart" class="empty-state">
+                <div style="font-size: 4rem; margin-bottom: 20px; color: #e0e0e0;">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>سبد خرید شما خالی است</h3>
+                <p>محصولات را از تب محصولات اضافه کنید</p>
+                <button id="browseProductsBtn" class="btn btn-primary" style="margin-top: 15px;">
+                    <i class="fas fa-shopping-bag"></i> مشاهده محصولات
+                </button>
+            </div>
+            
+            <div id="cartSummary" class="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <span>مجموع:</span>
+                    <span id="subtotal">0 افغانی</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>کل:</span>
+                    <span id="total">0 افغانی</span>
+                </div>
+                <div class="form-actions">
+                    <button id="clearCartBtn" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> پاک کردن سبد
+                    </button>
+                    <button id="checkoutBtn" class="btn btn-success">
+                        <i class="fas fa-shopping-bag"></i> تکمیل سفارش
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo-text">فروشگاه آنلاین AYM</div>
+                    <div class="footer-slogan">کیفیت، اعتماد، رضایت مشتری</div>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>تماس: ۰۷۸۹۲۸۱۷۷۰</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>لیسه مریم، مقابل مرکز تجارتی طلا، مارکیت تجارتی جام جم منزل سوم</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" id="footerAboutLink">درباره ما</a>
+                <a href="#" class="footer-link" id="footerContactLink">تماس با ما</a>
+                <a href="#" class="footer-link" id="footerPrivacyLink">حریم خصوصی</a>
+                <a href="#" class="footer-link" id="footerGuideLink">راهنمای خرید</a>
+                <a href="#" class="footer-link" id="footerFaqLink">سوالات متداول</a>
+            </div>
+            <div class="copyright">
+                <div>© ۱۴۰۴ - کلیه حقوق متعلق به فروشگاه آنلاین AYM می‌باشد</div>
+                <div> توسعه‌یافته با ❤️ برای مشتریان عزیز</div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- مودال جزئیات محصول -->
+    <div id="productDetailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" aria-label="بستن">×</button>
+                <h2>جزئیات محصول</h2>
+            </div>
+            <div class="modal-body">
+                <div id="detailView" class="detail-view">
+                    <div class="detail-gallery">
+                        <img id="detailMainImage" src="" alt="" class="detail-main-image" width="500" height="380" loading="lazy">
+                        <div class="image-fallback" style="display: none">📦</div>
+                    </div>
+                    <div id="detailThumbnails" class="detail-thumbnail-container">
+                        <!-- Thumbnails will be added here -->
+                    </div>
+                    <div class="detail-content">
+                        <h3 id="detailName"></h3>
+                        
+                        <div class="detail-section">
+                            <h4>
+                                <i class="fas fa-align-right"></i> توضیحات کامل
+                            </h4>
+                            <div style="position: relative;">
+                                <p id="detailDescription" class="description-text"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h4><i class="fas fa-info-circle"></i> اطلاعات محصول</h4>
+                            <div class="detail-info">
+                                <i class="fas fa-tag"></i>
+                                <span>قیمت: <span id="detailPrice"></span></span>
+                            </div>
+                            <div class="detail-info">
+                                <i class="fas fa-barcode"></i>
+                                <span>کود محصول: <span id="detailCode" class="product-code"></span></span>
+                            </div>
+                            <div class="detail-info">
+                                <i class="fas fa-box"></i>
+                                <span>موجودی: <span id="detailStock"></span></span>
+                            </div>
+                            <div class="detail-info">
+                                <i class="fas fa-layer-group"></i>
+                                <span>دسته‌بندی: <span id="detailCategory"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="addToCartBtn" class="btn btn-primary">
+                            <i class="fas fa-cart-plus"></i> افزودن به سبد خرید
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- مودال سبد خرید/بل -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <div class="modal-header">
+                <button class="close-modal" aria-label="بستن">×</button>
+                <h2><i class="fas fa-receipt"></i> بل خرید</h2>
+            </div>
+            <div class="modal-body">
+                <div id="billContent" class="bill-content">
+                    <!-- بل اینجا ایجاد می‌شود -->
+                </div>
+                <div class="form-actions">
+                    <button id="closeBillBtn" class="btn btn-primary">
+                        <i class="fas fa-times"></i> بستن
+                    </button>
+                    <button id="whatsappShareBtn" class="btn btn-success">
+                        <i class="fab fa-whatsapp"></i> ارسال به واتساپ
+                    </button>
+                    <button id="printBillBtn" class="btn btn-warning">
+                        <i class="fas fa-print"></i> پرنت بل
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- مودال اطلاعات -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content info-modal-content">
+            <div class="modal-header">
+                <button class="close-modal" aria-label="بستن">×</button>
+                <h2 id="infoModalTitle">عنوان</h2>
+            </div>
+            <div class="modal-body">
+                <div id="infoModalContent" class="info-content">
+                    <!-- محتوای اطلاعات اینجا نمایش داده می‌شود -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- فوتر ثابت -->
+    <div class="fixed-footer">
+        <button id="viewCartBtn" class="btn btn-primary">
+            <i class="fas fa-shopping-cart"></i> 
+            مشاهده سبد خرید 
+            <span id="cartCountFooter">(0)</span>
+        </button>
+        <button id="callSupportBtn" class="btn btn-success">
+            <i class="fas fa-phone-alt"></i> تماس با پشتیبانی
+        </button>
+    </div>
+
+    <!-- JavaScript (Deferred Loading) -->
+    <script src="/js/app.js" defer></script>
+    
+    <!-- Analytics -->
+    <script defer src="https://va.vercel-scripts.com/v1/script.js"></script>
+</body>
+</html>
